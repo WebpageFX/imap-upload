@@ -26,6 +26,24 @@ IMAP Upload is a tool for uploading a local mbox file to IMAP4 server. The most 
 
 ### Quick Start
 
+#### Using DevContainer
+
+1. **Start the Dev Container**
+   - Open the project in VS Code
+   - When prompted, click "Reopen in Container" or use Command Palette: "Dev Containers: Reopen in Container"
+   - The container will build and start automatically
+
+2. **Upload emails using the provided script**
+   ```bash
+   # Inside the container, run the upload script
+   ./upload_emails.sh -e "your-email@example.com" -p "your-password" -s "imap.example.com" -P 993 --ssl -f "emails.mbox"
+   
+   # Or use Gmail shortcut
+   ./upload_emails.sh --gmail -e "your-email@gmail.com" -p "your-password" -b "imported" -f "emails.mbox"
+   ```
+
+#### Traditional Installation
+
 Uploading a local mail box file &ldquo;Friends.mbox&rdquo; to the remote mail box &ldquo;imported&rdquo; on the server &ldquo;example.com&rdquo; using SSL:
 
 ```sh
